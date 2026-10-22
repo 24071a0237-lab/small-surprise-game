@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Loading…</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="game" aria-label="Endless runner game"></canvas>
+
+<div class="hud" id="hud" hidden>
+  <div class="meter">
+    <div id="scoreText"></div>
+    <div class="meter-track" id="meterTrack"><div class="meter-fill" id="meterFill"></div></div>
+  </div>
+  <div class="lives" id="lives" aria-live="polite"></div>
+</div>
+
+<div class="power" id="power" hidden></div>
+
+<div class="overlay" id="startScreen">
+  <div class="card">
+    <div class="big-emoji" id="startEmoji"></div>
+    <h1 id="startTitle"></h1>
+    <p id="startSub"></p>
+    <div class="legend" id="legend"></div>
+    <p>Swipe left or right to change lanes, up to jump, down to slide. On a computer, use the arrow keys.</p>
+    <button id="startBtn"></button>
+  </div>
+</div>
+
+<div class="overlay" id="endScreen" hidden>
+  <div class="card" id="endCard"></div>
+</div>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<!-- The theme file decides how this version of the game looks and what it says -->
+<script src="theme-mygame.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>
